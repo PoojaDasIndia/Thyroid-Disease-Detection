@@ -1,0 +1,102 @@
+body {
+		  font-family: Arial, Helvetica, sans-serif;
+		  background-color: #52796f;
+	}
+
+h1{color: #0d3b66}
+
+* {
+    box-sizing: border-box;
+    }
+
+		/* Add padding to containers */
+.container
+    {
+			width:650px;
+			box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+			border: 1.50px solid rgba(20, 33, 61, 0.9);
+			margin: 0px 5px 0px 350px;
+			padding: 0.5px 0.5px;
+			background-color: white;
+			border-radius: 10px;
+			justify-content: center;
+            align-items: center;
+            flex-direction: column;
+			text-align: justify;
+    }
+
+h6
+    {
+       color:black;
+	   margin: 0px 0px 0px 0px;
+	   text-align: right;
+	   font-size:8x;
+	}
+
+
+hr
+    {
+	    border: 0.5px dotted #61a5c2;
+		margin-bottom: 10px;
+	}
+
+.text
+    {
+		width: 350px;
+	    height: 30px;
+		margin: 0px 2px 0px 0px;
+		box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+		border: 1.25px solid rgba(10, 117, 110, 0.9);
+		background: #D9D9D9;
+		border-radius: 12px;
+		font-size:12px;
+		resize:none;
+    }
+
+.label
+    {
+    	color: #14213d;
+		text-align: left;
+		font-weight: bold;
+		font-size:14px;
+    }
+
+/* Set a style for the submit button */
+.predictbtn
+    {
+	  background-color: #14213d;
+	  color: white;
+	  padding: 5px 5px;
+	  margin: 0px 2px 0px 0px;
+	  border: none;
+	  cursor: pointer;
+	  width: 200px;
+	  height: 40px;
+	  opacity:0.9;
+	  border-radius: 37px;
+	  font-size:14px;
+	}
+
+/* Set for button */
+.predictbtn:hover
+    {
+	  opacity: 1;
+	}
+
+
+/* for result*/
+.result
+    {
+	  background-color: #61a5c2;
+	  text-align: center;
+	  font-size:16x;
+	  font-weight:bold;
+	  color:#780000;
+	  font-family: Arial, Helvetica, sans-serif;
+	  opacity: 0.80;
+	  width:590px;
+	  height: 20x;
+	  border-radius: 30px;
+	  padding: 0.5px 0.5px;
+	  margin: 10px 5px 5px 5px;
+	}

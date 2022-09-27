@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Thyroid Disease Detection</title>
+	<link rel="stylesheet" href="{{url_for('static' , filename ='CSS/style.css')}}">
+	<script src="{{url_for('static' , filename ='JS/script.js')}}"></script>
+<!--	<script src="../static/JS/script.js"></script>-->
+<!--	<link rel="stylesheet" type="text/css" href="../static/CSS/style.css">-->
+
+</head>
+<body>
+<form action="{{url_for('predict')}}" method="post">
+
+	<div class="container">
+	<center>
+		<center>
+			<h1>
+				<u>Thyroid Disease Detection</u>
+				
+			</h1>
+		</center>
+    
+       
+        
+		<div>
+
+            <label for="age" class="label">Age :</label>
+            <input type="text" class="text" name="age" id="age" placeholder="Enter Age"> 
+			
+			<hr>
+            Female <input type="radio"  name="sex" value ="0">
+            Male <input type="radio"  name="sex" value="1">
+
+			<hr>
+                     
+        
+            <label class="label">TSH measured :</label> <BR>
+			
+            False <input type="radio" onclick="javascript:TrueFalseCheckTSH();" name="TSH measured" value ="0" id="FalseTSHCheck">
+            True <input type="radio" onclick="javascript:TrueFalseCheckTSH();" name="TSH measured" value ="1" id="TrueTSHCheck">
+			
+			<br> 
+		
+				<div id="ifTSHTrue" style="visibility:hidden" >       
+					<label for="TSH" class="label" >TSH :</label> 
+					<input type="text" class="text" name="TSH" id="TSH" placeholder="Enter TSH" > 
+				
+				</div>			
+              
+			<hr> 
+			
+            
+			<label class="label" >T3 measured   :</label><BR> 
+                     
+            False <input type="radio" onclick="javascript:TrueFalseCheckT3();" name="T3 measured" value ="0" id="FalseT3Check">
+            True <input type="radio" onclick="javascript:TrueFalseCheckT3();" name="T3 measured" value ="1" id="TrueT3Check">
+			
+                     
+			<br> 
+		
+				<div id="ifT3True" style="visibility:hidden" >       
+					<label for="T3" class="label" >T3 :</label> 
+					<input type="text" class="text" name="T3" id="T3" placeholder="Enter T3" > 
+				
+				</div>
+				
+            <hr>
+       
+            <label class="label">TT4 measured :</label> <BR>
+                     
+            False <input type="radio" onclick="javascript:TrueFalseCheckTT4();" name="TT4 measured" value ="0" id="FalseTT4Check">
+            True <input type="radio" onclick="javascript:TrueFalseCheckTT4();" name="TT4 measured"  value ="1" id="TrueTT4Check">
+			
+			<br> 
+		
+				<div id="ifTT4True" style="visibility:hidden" >       
+					<label for="TT4" class="label" >TT4 :</label> 
+					<input type="text" class="text" name="TT4" id="TT4" placeholder="Enter TT4" > 
+				
+				</div>			
+              
+			<hr>
+                
+            
+            
+			<label class="label" >T4U measured :</label> <BR>
+                     
+            False <input type="radio" onclick="javascript:TrueFalseCheckT4U();" name="T4U measured" value ="0" id="FalseT4UCheck">
+            True <input type="radio" onclick="javascript:TrueFalseCheckT4U();" name="T4U measured" value ="1" id="TrueT4UCheck">
+			
+			<br> 
+		
+				<div id="ifT4UTrue" style="visibility:hidden" >       
+					<label for="T4U" class="label" >T4U :</label> 
+					<input type="text" class="text" name="T4U" id="T4U" placeholder="Enter T4U" > 
+				
+				</div>			
+              
+			
+			<hr>
+                
+			<label class="label">FTI measured :</label><BR> 
+                     
+            False <input type="radio" onclick="javascript:TrueFalseCheckFTI();" name="FTI measured" value ="0" id="FalseFTICheck">
+            True <input type="radio" onclick="javascript:TrueFalseCheckFTI();" name="FTI measured"  value ="1" id="TrueFTICheck">
+			
+			<br> 
+		
+				<div id="ifFTITrue" style="visibility:hidden" >       
+					<label for="FTI" class="label" >FTI :</label> 
+					<input type="text" class="text" name="FTI" id="FTI" placeholder="Enter FTI" > 
+				
+				</div>			
+              
+			<hr> 
+
+	    <center><button type="submit" class="predictbtn">Predict</button></center>
+
+			<center>
+			<div class="container result">
+				<p>{{Thyroid_Text}}</p>
+			</div>
+		
+		</center>
+	<div>
+	
+</form>
+<h6>Created By: <b>POOJA DAS</b></h6>
+</body>
+</html>
