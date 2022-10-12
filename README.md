@@ -4,6 +4,9 @@
 ## Heroku link
 ### https://thyroiddiseasedetect.herokuapp.com/
 
+## AWS link
+### http://ec2-35-78-175-118.ap-northeast-1.compute.amazonaws.com:8080/predict
+
 **click this**<br>
 [Thyroid-Disease-Detection](https://thyroiddiseasedetect.herokuapp.com/)
 
